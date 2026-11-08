@@ -83,7 +83,7 @@ AGENTS.md                      one line: "This repo uses Motif.NET. Read motif/R
 motif/
   README.md                    what's here, the reading order, and the rules for agents
   glossary.md                  the project's terms (people and agents edit it)
-  sketch.motifsketch.json      the design (Motif Sketch only)
+  sketch.motifsketch.json      the design (Motif Sketch, or agents when asked)
   plan.md                      the solution plan exported from the sketch (Motif Sketch only)
   diagrams/
     context-diagram.svg        exported from the sketch (Motif Sketch only)
@@ -94,6 +94,7 @@ motif/
 - **Fixed file names**, so the rules can name them and every Motif repo looks the same.
 - **Motif owns `motif/README.md`; the repo owns `AGENTS.md`.** The repo's agent file needs only one line pointing at the folder, so Motif's rules can change without touching it. `AGENTS.md` is read by most coding agents; Claude Code's `CLAUDE.md` can include it with `@AGENTS.md`.
 - **The plan is committed and re-exported** whenever the sketch changes. The diff of `plan.md` then tells the agent what to add, rename or remove, so the sketch stays useful after the first stubbing.
+- **Agents may change the sketch when asked.** It's plain JSON, so an agent can make a change a person asks for, keeping it a file Motif Sketch can open. The plan and the diagrams are still only exported, never edited by hand, so they're re-exported afterwards.
 - **Not yet:** a manifest (`motif/motif.json`) with suite and format versions. It's added when a second tool needs it.
 - **Later:** a `dotnet motif` CLI could `init` the folder and pointer, and `check` for **Avoid** words and a plan that's out of date with the sketch.
 
