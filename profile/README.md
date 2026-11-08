@@ -13,7 +13,7 @@ The tools are opinionated about architecture, naming, code style and automated s
 
 ### Why this exists
 
-Motif.NET is how I'm finding my way in AI-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus.
+Motif.NET is how I'm finding my way in AI-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus. Say hello or share ideas in [Discussions](https://github.com/motif-dotnet/.github/discussions).
 
 ## Tools
 
