@@ -8,9 +8,11 @@ The one source for the suite's mark and wordmarks. Tools use these files (or cop
 | [favicon.svg](favicon.svg) | Browser tab icon: the mark on a white rounded tile, so it shows on dark tab bars too |
 | [motif-net.svg](motif-net.svg) / [motif-net-dark.svg](motif-net-dark.svg) | The suite lockup: mark + **Motif**.NET |
 | [motif-sketch.svg](motif-sketch.svg) / [motif-sketch-dark.svg](motif-sketch-dark.svg) | Motif Sketch's lockup: mark + Motif **Sketch** |
+| [motif-glossary.svg](motif-glossary.svg) / [motif-glossary-dark.svg](motif-glossary-dark.svg) | Motif Glossary's lockup: mark + Motif **Glossary** |
 | [avatar.svg](avatar.svg) / [avatar.png](avatar.png) | The org avatar, 512 × 512 on white (GitHub rounds the corners) |
-| [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
+| [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) / [social-preview-glossary.png](social-preview-glossary.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
 | [linkedin-banner-light.png](linkedin-banner-light.png) / [linkedin-banner-dark.png](linkedin-banner-dark.png) | LinkedIn profile banners, 1584 × 396: the lockup, the tagline and the org URL, kept to the right so the profile photo doesn't cover them |
+| [web/](web/) | The web kit: the shared stylesheet, fonts, icons and app-bar components every Motif web tool copies in. See its [README](web/README.md) |
 
 ## The mark
 
@@ -41,4 +43,8 @@ The lockups embed IBM Plex Sans (Regular and SemiBold, Latin-1), so they render 
 
 ## Adding a tool
 
-Copy `motif-sketch.svg`, change the second `<text>` and its `<title>`, and set the width to fit the name.
+Copy `motif-sketch.svg` (and the dark one), change the second `<text>` and its `<title>`, and set the width to fit the name: the name starts at x = 141, so the width is 141 plus the name's width in Plex SemiBold at 30 px.
+
+Make its social preview card to match the others (1280 × 640: the lockup 120 px high, a one-line description in Plex at 38 px, the URL, and a 14 px orange bar), and use it for the repo's Social preview and the app's `og:image`.
+
+Then follow [web/README.md](web/README.md) to give the app the shared look and add it to the tool switcher.
