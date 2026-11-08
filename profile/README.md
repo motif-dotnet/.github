@@ -1,4 +1,9 @@
-# Motif.NET
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/motif-dotnet/.github/main/brand/motif-net-dark.svg">
+    <img alt="Motif.NET" src="https://raw.githubusercontent.com/motif-dotnet/.github/main/brand/motif-net.svg" height="48">
+  </picture>
+</h1>
 
 **Opinionated, AI-assisted tooling for building .NET apps, from first sketch to production.**
 
