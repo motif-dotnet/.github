@@ -67,12 +67,10 @@ Markdown, not JSON, because people read and review it far more often than tools 
 - **The agent maintains it.** When the agent introduces a new concept, it adds a *proposed* entry in the same change. A reviewer agrees it or renames it.
 - **Later, checking.** A check could flag **Avoid** words in code, comments and docs. That would make the glossary a working part of the lifecycle, not just a document.
 
-## How Motif Sketch could help, later
+## How Motif Sketch helps
 
-- **Export glossary:** writes starting entries from the sketch, or merges new ones into an existing `motif/glossary.md` by **Sketch** id without touching anything people wrote.
-- The solution plan could link to the glossary, so the agent reads both before stubbing.
-
-Neither is needed for the test run.
+- **Export glossary** (built, [Motif.Sketch#5](https://github.com/motif-dotnet/Motif.Sketch/issues/5)): writes starting entries from the sketch's actors, external systems, storage and ports, or merges new ones into an existing `motif/glossary.md` by **Sketch** id (or name) without touching anything people wrote. New entries are *proposed*. Renames aren't carried across yet.
+- **Later:** the solution plan could link to the glossary, so the agent reads both before stubbing.
 
 ## Repo layout
 
