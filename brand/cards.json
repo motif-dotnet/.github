@@ -1,0 +1,49 @@
+{
+  "layouts": {
+    "social": {
+      "width": 1280, "height": 640,
+      "lockupX": 114, "lockupHeight": 120, "lockupTopForTwoLines": 145,
+      "textX": 120, "fontSize": 40, "lineHeight": 54, "firstBaselineBelowLockupTop": 210,
+      "urlSize": 28, "urlBaselineBelowLastLine": 77,
+      "barHeight": 14
+    },
+    "linkedin": {
+      "width": 1584, "height": 396,
+      "lockupX": 596, "lockupHeight": 84, "lockupTopForTwoLines": 70,
+      "textX": 600, "fontSize": 31, "lineHeight": 42, "firstBaselineBelowLockupTop": 142,
+      "urlSize": 22, "urlBaselineBelowLastLine": 51,
+      "barHeight": 14
+    }
+  },
+  "themes": {
+    "light": { "background": "#FFFFFF", "text": "#334155", "muted": "#64748B", "bar": "#EA580C", "lockupSuffix": "" },
+    "dark": { "background": "#0F172A", "text": "#CBD5E1", "muted": "#94A3B8", "bar": "#FB923C", "lockupSuffix": "-dark" }
+  },
+  "cards": [
+    {
+      "file": "social-preview-net.png", "layout": "social", "theme": "light", "lockup": "motif-net",
+      "lines": ["Opinionated, agent-assisted tooling for building", ".NET apps, from first sketch onwards."],
+      "url": "github.com/motif-dotnet"
+    },
+    {
+      "file": "social-preview-sketch.png", "layout": "social", "theme": "light", "lockup": "motif-sketch",
+      "lines": ["Sketch a context diagram and a ports-and-adapters", "design, then export pictures and a solution plan for your", "coding agent."],
+      "url": "motif-dotnet.github.io/Motif.Sketch"
+    },
+    {
+      "file": "social-preview-glossary.png", "layout": "social", "theme": "light", "lockup": "motif-glossary",
+      "lines": ["See a project's glossary at a glance: terms grouped by", "kind, proposed terms picked out for review, and gentle", "notes on the format and the sketch."],
+      "url": "motif-dotnet.github.io/Motif.Glossary"
+    },
+    {
+      "file": "linkedin-banner-light.png", "layout": "linkedin", "theme": "light", "lockup": "motif-net",
+      "lines": ["Opinionated, agent-assisted tooling for building .NET apps,", "from first sketch onwards."],
+      "url": "github.com/motif-dotnet"
+    },
+    {
+      "file": "linkedin-banner-dark.png", "layout": "linkedin", "theme": "dark", "lockup": "motif-net",
+      "lines": ["Opinionated, agent-assisted tooling for building .NET apps,", "from first sketch onwards."],
+      "url": "github.com/motif-dotnet"
+    }
+  ]
+}

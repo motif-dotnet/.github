@@ -12,6 +12,7 @@ The one source for the suite's mark and wordmarks. Tools use these files (or cop
 | [avatar.svg](avatar.svg) / [avatar.png](avatar.png) | The org avatar, 512 × 512 on white (GitHub rounds the corners) |
 | [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) / [social-preview-glossary.png](social-preview-glossary.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
 | [linkedin-banner-light.png](linkedin-banner-light.png) / [linkedin-banner-dark.png](linkedin-banner-dark.png) | LinkedIn profile banners, 1584 × 396: the lockup, the tagline and the org URL, kept to the right so the profile photo doesn't cover them |
+| [cards.json](cards.json) / [render-cards.ps1](render-cards.ps1) | The words and layout of the cards and banners above, and the script that draws them. See [Cards and banners](#cards-and-banners) |
 | [web/](web/) | The web kit: the shared stylesheet, fonts, icons and app-bar components every Motif web tool copies in. See its [README](web/README.md) |
 
 ## The mark
@@ -41,10 +42,30 @@ IBM Plex Sans at 30 px beside a 48 px mark, 16 px apart. The suite name sets **M
 
 The lockups embed IBM Plex Sans (Regular and SemiBold, Latin-1), so they render the same everywhere. IBM Plex is licensed under the SIL Open Font License 1.1.
 
+## Cards and banners
+
+The social preview cards and LinkedIn banners are drawn from [cards.json](cards.json), so don't edit the PNGs by hand. To change a tagline or description, edit its `lines` (you set the line breaks) and run:
+
+```powershell
+./brand/render-cards.ps1                           # every card
+./brand/render-cards.ps1 social-preview-net.png    # just this one
+```
+
+It needs Microsoft Edge or Google Chrome, which it runs headless to draw each card at its exact size. The description is IBM Plex Sans at 40 px on a 54 px line (31 px on 42 px for the banners), and the block stays vertically centred however many lines it has.
+
+Each card is also copied elsewhere, so after rendering, copy it on and push:
+
+| Card | Also lives at | Then |
+|---|---|---|
+| `social-preview-net.png` | `motif-dotnet.github.io/social-preview.png` | Upload it as the Social preview of the `.github` and `motif-dotnet.github.io` repos |
+| `social-preview-sketch.png` | `Motif.Sketch.App/wwwroot/social-preview.png` | Upload it as the Motif.Sketch repo's Social preview |
+| `social-preview-glossary.png` | `Motif.Glossary.App/wwwroot/social-preview.png` | Upload it as the Motif.Glossary repo's Social preview |
+| `linkedin-banner-*.png` | | Upload it as the LinkedIn banner |
+
 ## Adding a tool
 
 Copy `motif-sketch.svg` (and the dark one), change the second `<text>` and its `<title>`, and set the width to fit the name: the name starts at x = 141, so the width is 141 plus the name's width in Plex SemiBold at 30 px.
 
-Make its social preview card to match the others (1280 × 640: the lockup 120 px high, a one-line description in Plex at 38 px, the URL, and a 14 px orange bar), and use it for the repo's Social preview and the app's `og:image`.
+Add its social preview card to [cards.json](cards.json) (copy the Motif Sketch entry, and set its lockup, description lines and URL), run `render-cards.ps1`, and use the card for the repo's Social preview and the app's `og:image`.
 
 Then follow [web/README.md](web/README.md) to give the app the shared look and add it to the tool switcher.
