@@ -9,6 +9,7 @@ The one source for the suite's mark and wordmarks. Tools use these files (or cop
 | [motif-net.svg](motif-net.svg) / [motif-net-dark.svg](motif-net-dark.svg) | The suite lockup: mark + **Motif**.NET |
 | [motif-sketch.svg](motif-sketch.svg) / [motif-sketch-dark.svg](motif-sketch-dark.svg) | Motif Sketch's lockup: mark + Motif **Sketch** |
 | [avatar.svg](avatar.svg) / [avatar.png](avatar.png) | The org avatar, 512 × 512 on white (GitHub rounds the corners) |
+| [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
 
 ## The mark
 
