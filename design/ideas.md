@@ -32,7 +32,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Motif CLI** (`dotnet motif`) | `init` sets up the `motif/` folder and the `AGENTS.md` pointer; `check` runs the gentle checks below. | [#4](https://github.com/motif-dotnet/.github/issues/4) |
 | **Glossary checks** | Flag **Avoid** words, terms still *proposed*, and sketch names with no entry. | Likely the CLI's first check. |
 | **Glossary editor** | An app for browsing and editing `motif/glossary.md`. | Reads and writes the same file. |
-| **Glossary in context** | Glossary terms shown where you work: IDE hover text, and Sketch highlighting names that aren't in the glossary. | Stretch goal. |
+| **Glossary in context** | Glossary terms shown where you work: IDE hover text, and Sketch highlighting names that aren't in the glossary. | Stretch goal. [#10](https://github.com/motif-dotnet/.github/issues/10) |
 | **Architecture checks** | Report when the domain references an adapter or framework, or when the ports in code don't match the sketch. | |
 | **Sketch from code** | Regenerate the sketch from the solution and compare it with the committed one to show drift. | |
 | **Code-style baseline** | The solution plan sets up analysers, `.editorconfig`, nullable and warnings as errors. | Part of Motif Sketch. [#8](https://github.com/motif-dotnet/.github/issues/8) |

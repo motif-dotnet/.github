@@ -30,7 +30,7 @@ A named boundary of the system that adapters plug into. A port is on the
 driving side (things that use the system) or the driven side (things the
 system uses).
 
-- **Kind:** sketch concept
+- **Kind:** domain concept
 - **Avoid:** interface (that's how a port appears in code, not what it is)
 - **Status:** agreed
 
@@ -46,7 +46,7 @@ without saving a file. Opens in Viewer mode.
 
 | Field | Meaning |
 |---|---|
-| **Kind** | What sort of term it is. The first kinds come from Motif Sketch: actor, external system, storage, port. Others: domain concept, process, rule. The list stays open while we learn. |
+| **Kind** | Where the term sits. One of seven: *system*, *actor*, *external system*, *storage*, *port* and *adapter* come from the sketch; *domain concept* covers everything else the app is about. A term that is both an element and the port that reaches it (Clipboard) has two kinds, never more. |
 | **Avoid** | Synonyms not to use. This is the opinionated part, and the part that stops drift. |
 | **In code** | The name in code, when it differs from the term, such as a type name. |
 | **Status** | *proposed* or *agreed*. An agent can propose terms; people agree them. A term without a status counts as agreed. |
@@ -108,11 +108,10 @@ What it showed so far:
 - **One term can have two sketch ids.** Clipboard and Diagram Exports are each an element and a port with the same name, so **Sketch** and **Kind** can hold two values.
 - **Near-synonyms between storage and ports** (Project Files and Projects, Solution Plans and Solution Stubs) are worth noticing in the sketch itself.
 - **Most adapters aren't glossary terms.** Adapter names are usually technology names (IndexedDB, SVG Files). An adapter gets an entry only if people talk about it, as with Web App and Specs.
-- **Kind is too loose.** The test run used ten kinds. It should become a fixed list.
+- **Kind was too loose.** The test run used ten kinds. Most of the extras (sketch concept, element type, adapter kind) were Motif Sketch's own domain, since it is a tool about sketches. Settled as a fixed list of seven ([#1](https://github.com/motif-dotnet/.github/issues/1)): the six kinds of thing in a sketch, plus *domain concept*.
 
 Next: use it in normal work for a while, and keep noting where the format chafes.
 
 ## Open questions
 
 - Is a flat list enough, or do bigger systems need sections, such as one per bounded context?
-- What's the fixed list of kinds? A first guess: actor, external system, storage, port, adapter, domain concept, sketch concept.
