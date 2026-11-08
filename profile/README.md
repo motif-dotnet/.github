@@ -2,7 +2,7 @@
 
 **Opinionated, AI-assisted tooling for building .NET apps, from first sketch to production.**
 
-Motif.NET is a suite of tools that cover the whole development lifecycle. Each tool does one stage well, and the output of one is the input to the next, so a design you sketch can become a plan a coding agent builds from.
+Motif.NET is a suite of tools that cover the whole development lifecycle. Each tool does one stage well, and the output of one is the input to the next, so a design you sketch can become a plan that a coding agent builds from.
 
 ## Tools
 
