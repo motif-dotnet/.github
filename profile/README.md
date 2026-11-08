@@ -20,7 +20,7 @@ Motif.NET is how I'm finding my way in AI-assisted development. The tools are wh
 | Tool | What it does | Status |
 |---|---|---|
 | [**Motif Sketch**](https://github.com/motif-dotnet/Motif.Sketch) | Sketch a system context diagram and a ports-and-adapters design, then export SVG pictures and a Markdown solution plan a coding agent can build stubs from. Runs in the browser, with no server and no accounts. [Try it](https://motif-dotnet.github.io/Motif.Sketch/). | Built |
-| [**Motif Glossary**](https://github.com/motif-dotnet/.github/blob/main/design/glossary.md) | The project's agreed terms, kept in `motif/glossary.md` and read by people and agents at the start of every session, so names don't drift. An editor app and checks may follow. | Trial |
+| [**Motif Glossary**](https://github.com/motif-dotnet/Motif.Glossary) | The project's agreed terms, kept in `motif/glossary.md` ([format](https://github.com/motif-dotnet/.github/blob/main/design/glossary.md)) and read by people and agents at the start of every session, so names don't drift. A viewer for reviewing a whole glossary is being built; an editor and checks may follow. | Trial |
 
 **Built:** ready to use. **Trial:** in use on Motif's own repos, still changing. **Idea:** written up, nothing built yet.
 

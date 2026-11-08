@@ -1,6 +1,6 @@
 # Motif Glossary: design note
 
-**Status:** idea, written up 2026-11-08. Nothing built yet.
+**Status:** format on trial since 2026-11-08. A viewer app, [Motif.Glossary](https://github.com/motif-dotnet/Motif.Glossary), is being built.
 
 ## The idea
 
@@ -13,9 +13,9 @@ This is the idea of a "ubiquitous language" from domain-driven design, kept plai
 ## Decisions so far
 
 1. **The file is the product.** The glossary is a Markdown file in the app's repo, edited and reviewed in pull requests like any other text. It doesn't live inside a tool.
-2. **No app yet.** For now the glossary is a file format plus conventions. A Motif Glossary app comes later, if editing the file by hand gets tedious, and it would read and write the same file.
+2. **A viewer first.** The glossary is a file format plus conventions, edited by hand. The first app, [Motif Glossary](https://github.com/motif-dotnet/Motif.Glossary), only reads it: it shows a whole glossary grouped by kind, so it's easy to review ([#10](https://github.com/motif-dotnet/.github/issues/10)). An editor may follow, if editing the file by hand gets tedious, and it would read and write the same file.
 3. **Motif.Sketch is the first test run.** Its repo gets the first glossary, kept up by hand while we learn what the format needs.
-4. **Name:** *Motif Glossary* (`Motif.Glossary`) if it becomes a tool. "Language" is ambiguous in .NET (C#, a DSL, localisation).
+4. **Name:** *Motif Glossary* (`Motif.Glossary`). "Language" is ambiguous in .NET (C#, a DSL, localisation).
 
 ## The file
 
