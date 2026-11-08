@@ -19,7 +19,7 @@ This is the idea of a "ubiquitous language" from domain-driven design, kept plai
 
 ## The file
 
-`GLOSSARY.md` at the repo root, next to `README.md`, so people and agents find it without being told. The repo's `CLAUDE.md` or `AGENTS.md` points to it, with an instruction to use its terms and avoid the words it lists under **Avoid**.
+`motif/glossary.md`, in the repo's Motif folder (see [Repo layout](#repo-layout)). `motif/README.md` tells agents to read it first, use its terms and avoid the words it lists under **Avoid**.
 
 One `##` heading per term, in alphabetical order. Under it, a one- or two-sentence definition, then a short list of fields. Every field except the definition is optional.
 
@@ -69,24 +69,50 @@ Markdown, not JSON, because people read and review it far more often than tools 
 
 ## How Motif Sketch could help, later
 
-- **Export glossary:** writes starting entries from the sketch, or merges new ones into an existing `GLOSSARY.md` by **Sketch** id without touching anything people wrote.
+- **Export glossary:** writes starting entries from the sketch, or merges new ones into an existing `motif/glossary.md` by **Sketch** id without touching anything people wrote.
 - The solution plan could link to the glossary, so the agent reads both before stubbing.
 
 Neither is needed for the test run.
 
+## Repo layout
+
+Motif tools work together through **files in the app's repo**, not by calling each other. They all live in one folder, `motif/`:
+
+```
+AGENTS.md                      one line: "This repo uses Motif.NET. Read motif/README.md first."
+motif/
+  README.md                    what's here, the reading order, and the rules for agents
+  glossary.md                  the project's terms (people and agents edit it)
+  sketch.motifsketch.json      the design (Motif Sketch only)
+  plan.md                      the solution plan exported from the sketch (Motif Sketch only)
+  diagrams/
+    context-diagram.svg        exported from the sketch (Motif Sketch only)
+    ports-and-adapters.svg
+```
+
+- **A plain folder, not `.motif/`.** A dot-folder says "tool machinery, don't touch", but people read and edit what's in here. Lowercase sets it apart from the capitalised .NET project folders.
+- **Fixed file names**, so the rules can name them and every Motif repo looks the same.
+- **Motif owns `motif/README.md`; the repo owns `AGENTS.md`.** The repo's agent file needs only one line pointing at the folder, so Motif's rules can change without touching it. `AGENTS.md` is read by most coding agents; Claude Code's `CLAUDE.md` can include it with `@AGENTS.md`.
+- **The plan is committed and re-exported** whenever the sketch changes. The diff of `plan.md` then tells the agent what to add, rename or remove, so the sketch stays useful after the first stubbing.
+- **Not yet:** a manifest (`motif/motif.json`) with suite and format versions. It's added when a second tool needs it.
+- **Later:** a `dotnet motif` CLI could `init` the folder and pointer, and `check` for **Avoid** words and a plan that's out of date with the sketch.
+
 ## Test run on Motif.Sketch
 
-1. Write `GLOSSARY.md` for Motif.Sketch by hand, starting from its sketch and SPEC.md.
-2. Point its `CLAUDE.md` at it.
-3. Use it in normal work for a while, and note where the format chafes: missing fields, fields nobody fills in, terms that don't fit a kind.
-4. Revise this note with what we learn.
+Done on 2026-11-08: Motif.Sketch's repo has the layout above, with 36 glossary terms taken from its sketch, SPEC.md and code. There, the sketch is also the app's bundled example, and the specs fail if `plan.md` or the diagrams don't match what the sketch exports.
 
-## Suite convention this suggests
+What it showed so far:
 
-Motif tools work together through **files in the app's repo**, not by calling each other. Each tool owns its files, and the formats are documented (and perhaps shared through a small `Motif.Core` library). So Motif Sketch writes the sketch and the plan, the glossary sits beside them, and a later tool reads whichever it needs.
+- **The glossary settles real ambiguities.** *Project* (a Motif Sketch file) and *planned project* (a .NET project in the plan) share a word. *Stub* collides with *Solution Stubs*. *Primary/secondary* are actor types, so they can't also name the port sides. *Link* means a snapshot link, so relationships aren't links.
+- **It caught drift in its own sketch on day one:** two relationship labels say "share links", a word the glossary avoids.
+- **One term can have two sketch ids.** Clipboard and Diagram Exports are each an element and a port with the same name, so **Sketch** and **Kind** can hold two values.
+- **Near-synonyms between storage and ports** (Project Files and Projects, Solution Plans and Solution Stubs) are worth noticing in the sketch itself.
+- **Most adapters aren't glossary terms.** Adapter names are usually technology names (IndexedDB, SVG Files). An adapter gets an entry only if people talk about it, as with Web App and Specs.
+- **Kind is too loose.** The test run used ten kinds. It should become a fixed list.
+
+Next: use it in normal work for a while, and keep noting where the format chafes.
 
 ## Open questions
 
-- Root `GLOSSARY.md`, or a `/motif/` folder holding all the Motif files (sketch, plan, glossary)? Root for now.
 - Is a flat list enough, or do bigger systems need sections, such as one per bounded context?
-- Should **Kind** be a fixed list once we've seen what's actually used?
+- What's the fixed list of kinds? A first guess: actor, external system, storage, port, adapter, domain concept, sketch concept.
