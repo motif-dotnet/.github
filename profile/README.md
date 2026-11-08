@@ -5,7 +5,7 @@
   </picture>
 </h1>
 
-**Opinionated, AI-assisted tooling for building .NET apps, from first sketch onwards.**
+**Opinionated, agent-assisted tooling for building .NET apps, from first sketch onwards.**
 
 Motif.NET is a suite of tools and conventions for building .NET apps with a coding agent. Each one does one job well, and they work together through files in the app's repo, so a design you sketch can become a plan that a coding agent builds from.
 
@@ -13,7 +13,7 @@ The tools are opinionated about architecture, naming, code style and automated s
 
 ### Why this exists
 
-Motif.NET is how I'm finding my way in AI-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus. Say hello or share ideas in [Discussions](https://github.com/motif-dotnet/.github/discussions).
+Motif.NET is how I'm finding my way in agent-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus. Say hello or share ideas in [Discussions](https://github.com/motif-dotnet/.github/discussions).
 
 ## Tools
 
