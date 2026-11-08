@@ -17,6 +17,8 @@ Motif.NET is how I'm finding my way in AI-assisted development. The tools are wh
 
 ## Tools
 
+Open any of them from **[motif-dotnet.github.io](https://motif-dotnet.github.io/)**, or from the Motif menu at the top left of each tool.
+
 | Tool | What it does | Status |
 |---|---|---|
 | [**Motif Sketch**](https://github.com/motif-dotnet/Motif.Sketch) | Sketch a system context diagram and a ports-and-adapters design, then export SVG pictures and a Markdown solution plan a coding agent can build stubs from. Runs in the browser, with no server and no accounts. [Try it](https://motif-dotnet.github.io/Motif.Sketch/). | Built |
