@@ -2,7 +2,7 @@
 
 The look and chrome every Motif web tool shares, so a new tool, or the suite's landing page, starts consistent and stays that way. Motif Sketch, Motif Glossary and the [landing page](https://github.com/motif-dotnet/motif-dotnet.github.io) all use it.
 
-Each app keeps its own **copy**, made by `scripts/sync-suite.sh`, rather than a package: no publishing step, and an app builds offline. A workflow in each app (`.github/workflows/suite.yml`) runs `scripts/sync-suite.sh --check` on every push and weekly, and goes red when the app's copy differs from this folder. It never blocks a deploy.
+Each app keeps its own **copy**, made by `scripts/sync-suite.sh`, rather than a package: no publishing step, and an app builds offline. A workflow in each app (`.github/workflows/suite.yml`) runs `scripts/sync-suite.sh` every day and commits any change to the app's `main`; in a tool it runs the tests first, commits only if they pass, and then deploys. On every push it runs `--check` instead, and goes red when the app's copy differs from this folder. It never blocks a deploy.
 
 ## What's in it
 
@@ -41,4 +41,4 @@ The components hold no state of their own: the app says which menu is open and w
 4. Add the tool to `Tools.All` in [Suite/Tools.cs](Suite/Tools.cs), then sync the other tools so their switchers list it. Add it to the [landing page](https://github.com/motif-dotnet/motif-dotnet.github.io) too, which keeps its own list because it also shows each tool's status and the ideas still to come.
 5. Copy [the workflow](https://github.com/motif-dotnet/Motif.Glossary/blob/main/.github/workflows/suite.yml) into `.github/workflows/`.
 
-To change the kit, edit this folder, then run `scripts/sync-suite.sh` in each tool and commit there.
+To change the kit, edit this folder. Each tool and the landing page pick the change up within a day; to have it sooner, run the **Motif web kit** workflow by hand in each repo, or run `scripts/sync-suite.sh` there and commit.
