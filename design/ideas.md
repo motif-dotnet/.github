@@ -40,6 +40,23 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Agent review** | A review prompt or skill that checks a change against Motif's opinions (architecture, glossary, style) and gives advice only. | Could cover the spirit of the checks long before they're built. |
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
+| **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | Trial first, on Motif's own specs; Shouldly stays the default meanwhile. See [Motif.Is](#motifis-isly) below. |
+
+## Motif.Is (Isly)
+
+It started as a half-joke: an assertion library written properly, not how it [should be](https://github.com/shouldly/shouldly), but how it is. Shouldly writes `result.ShouldBe(5)`; Isly writes `result.Is(5)`.
+
+Under the joke there's a real point. An assertion isn't a wish; it's a proposition, a claim about the app that is either true or false, and a failing check reports that the claim is false. That's the testing-versus-checking distinction: a check is a machine-decidable proposition, and the specs Motif sets up are spec-style checks. The working name inside the suite is **Motif.Is**, with Isly kept as the origin story.
+
+**Why build it, when Shouldly works.** On its own, preferring *is* to *should* doesn't meet the "use what already works" bar. Plain-English specs is the reason:
+
+- **Better sentences.** "The order total is 12.50" reads as a fact; "the order total should be 12.50" reads as a hope. If the living document is generated from the specs, propositions make it read properly.
+- **Structure that's kept.** Shouldly turns an assertion into a failure message and throws the structure away. Motif.Is would keep each check as a proposition (subject, claim, expected and actual values) that a generator can read without parsing C#.
+- **Glossary terms.** Subjects can be glossary terms, which ties in with glossary checks and spec conventions.
+
+**Self-hosting.** Once a minimal `Is` works, every further spec of Motif.Is is written in Motif.Is: it checks itself, as a compiler compiles itself. That keeps the core small and trustworthy.
+
+**Until then.** Solution plans keep setting up Shouldly. Motif.Is is tried on Motif's own specs first, and becomes the default only if it earns it.
 
 ## Open questions
 
