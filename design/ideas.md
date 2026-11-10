@@ -36,7 +36,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Architecture checks** | Report when the domain references an adapter or framework, or when the ports in code don't match the sketch. | |
 | **Sketch from code** | Regenerate the sketch from the solution and compare it with the committed one to show drift. | |
 | **Code-style baseline** | The solution plan sets up analysers, `.editorconfig`, nullable and warnings as errors. | Part of Motif Sketch. [#8](https://github.com/motif-dotnet/.github/issues/8) |
-| **Spec conventions** | How behaviour specs are named and laid out, in glossary terms, perhaps with a spec project the plan generates. | First step towards plain-English specs. |
+| **Spec conventions** | How behaviour specs are named and laid out, in glossary terms, perhaps with a spec project the plan generates. | First step towards plain-English specs. One candidate: [spec names as propositions](#motifis-isly), tried in Motif.Is first. |
 | **Agent review** | A review prompt or skill that checks a change against Motif's opinions (architecture, glossary, style) and gives advice only. | Could cover the spirit of the checks long before they're built. |
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
@@ -49,6 +49,8 @@ It started as a half-joke: an assertion library written properly, not how it [sh
 Under the joke there's a real point. An assertion isn't a wish; it's a proposition, a claim about the app that is either true or false, and a failing check reports that the claim is false. That's the testing-versus-checking distinction: a check is a machine-decidable proposition, and the specs Motif sets up are spec-style checks. The working name inside the suite is **Motif.Is**, with Isly kept as the origin story.
 
 **Credits.** The checking vocabulary comes from James Bach and Michael Bolton, in [Testing and Checking Refined](https://www.satisfice.com/blog/archives/856) (2013). Kevlin Henney pointed out how weak "should" is: test names should "reflect outcome not aspiration" ([2013](https://twitter.com/KevlinHenney/status/350242801868484608)), and since all code is a hypothesis, "should" is a truism and noise ([2016](https://x.com/KevlinHenney/status/703233830337925120)). His talks on good unit tests treat tests as propositions. He was talking about test names; Motif.Is takes the same point to the claims inside them.
+
+**Spec names as propositions.** Also from Henney ([Structure and Interpretation of Test Cases](https://www.slideshare.net/Kevlin/structure-and-interpretation-of-test-cases)): a good spec name is long, so use all of it. Namespace, class and method together read as one proposition, and specs that share a namespace or class are grouped by the start of the sentence they share. Test runners already show specs as that tree. Motif.Is tries this first; if it works, it could become one of Motif's spec conventions.
 
 **Why build it, when Shouldly works.** On its own, preferring *is* to *should* doesn't meet the "use what already works" bar. Plain-English specs is the reason:
 
