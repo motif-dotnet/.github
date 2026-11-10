@@ -40,7 +40,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Agent review** | A review prompt or skill that checks a change against Motif's opinions (architecture, glossary, style) and gives advice only. | Could cover the spirit of the checks long before they're built. |
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
-| **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | Trial first, on Motif's own specs; Shouldly stays the default meanwhile. See [Motif.Is](#motifis-isly) below. |
+| **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | Trial first, on Motif's own specs; AwesomeAssertions stays the default meanwhile. See [Motif.Is](#motifis-isly) below. |
 
 ## Motif.Is (Isly)
 
@@ -56,7 +56,7 @@ Under the joke there's a real point. An assertion isn't a wish; it's a propositi
 
 **Self-hosting.** Once a minimal `Is` works, every further spec of Motif.Is is written in Motif.Is: it checks itself, as a compiler compiles itself. That keeps the core small and trustworthy.
 
-**Until then.** Solution plans keep setting up Shouldly. Motif.Is is tried on Motif's own specs first, and becomes the default only if it earns it.
+**Until then.** Solution plans keep setting up AwesomeAssertions (the free fork of FluentAssertions). Motif.Is is tried on Motif's own specs first, and becomes the default only if it earns it.
 
 ## Open questions
 
