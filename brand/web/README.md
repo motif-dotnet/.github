@@ -17,7 +17,7 @@ The components in `Suite/`:
 
 | Component | Use |
 |---|---|
-| `ToolSwitcher` | The brand at the left of the app bar: the mark and "Motif *Tool*", opening a menu of the Motif tools (from `Tools.All`), with this tool marked. A tool that's next up (`Ready: false`) is listed greyed out, with no link. Pass `Repo` ("owner/name") when the tool is showing a GitHub repo, and every link carries it as `#repo=owner/name`, so switching tools stays on the same project |
+| `ToolSwitcher` | The brand at the left of the app bar: the mark and "Motif *Tool*", opening a menu of the Motif tools (from `Tools.All`), with this tool marked. A tool that's next up (`Ready: false`) is listed greyed out, with no link. A tool with a `NewUntil` date that hasn't passed is tagged "new", and the switcher shows a dot by the tool's name until the viewer next opens the menu (remembered in this browser only, under `motif-seen-new`). Clear `NewUntil` once the news is old. Pass `Repo` ("owner/name") when the tool is showing a GitHub repo, and every link carries it as `#repo=owner/name`, so switching tools stays on the same project |
 | `ThemeMenu` | System, Light or Dark, with icons and "Remembered in this browser only." The app stores the choice in `localStorage` under `motif-theme`, which every tool on motif-dotnet.github.io shares |
 | `HelpDialog` | The Help dialog's frame, titled with the tool's name and line. The app writes the content |
 | `ToastList` | Toasts at the bottom right, from a `Toaster` |
