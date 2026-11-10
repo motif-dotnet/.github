@@ -9,6 +9,8 @@ Motif.NET is one person's way of finding their feet in agent-assisted developmen
 - **Got an idea for a new tool or convention, or something not settled yet?** Start a thread in [Ideas](https://github.com/motif-dotnet/.github/discussions/categories/ideas). Ideas that take shape end up in [design/ideas.md](design/ideas.md).
 - **Have a question?** Ask in [Q&A](https://github.com/motif-dotnet/.github/discussions/categories/q-a).
 
+Wherever you take part, the [code of conduct](CODE_OF_CONDUCT.md) applies: be excellent to each other.
+
 ## Pull requests
 
 Small fixes (typos, broken links, an obvious bug) can go straight to a pull request.
