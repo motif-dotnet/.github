@@ -48,6 +48,8 @@ It started as a half-joke: an assertion library written properly, not how it [sh
 
 Under the joke there's a real point. An assertion isn't a wish; it's a proposition, a claim about the app that is either true or false, and a failing check reports that the claim is false. That's the testing-versus-checking distinction: a check is a machine-decidable proposition, and the specs Motif sets up are spec-style checks. The working name inside the suite is **Motif.Is**, with Isly kept as the origin story.
 
+**Credits.** The checking vocabulary comes from James Bach and Michael Bolton, in [Testing and Checking Refined](https://www.satisfice.com/blog/archives/856) (2013). Kevlin Henney pointed out how weak "should" is: test names should "reflect outcome not aspiration" ([2013](https://twitter.com/KevlinHenney/status/350242801868484608)), and since all code is a hypothesis, "should" is a truism and noise ([2016](https://x.com/KevlinHenney/status/703233830337925120)). His talks on good unit tests treat tests as propositions. He was talking about test names; Motif.Is takes the same point to the claims inside them.
+
 **Why build it, when Shouldly works.** On its own, preferring *is* to *should* doesn't meet the "use what already works" bar. Plain-English specs is the reason:
 
 - **Better sentences.** "The order total is 12.50" reads as a fact; "the order total should be 12.50" reads as a hope. If the living document is generated from the specs, propositions make it read properly.
