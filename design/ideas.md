@@ -29,6 +29,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 
 | Idea | One line | Notes |
 |---|---|---|
+| **Motif Memory** | Set up an agent's external memory: a git repo of progressively discoverable Markdown files, with the roles, workflow and design guidelines that suit you. The agent's instructions file just points to it, and a Memory Auditor role helps it grow. | Mainly a setup tool. Written up in [Motif.Memory](https://github.com/motif-dotnet/Motif.Memory). |
 | **Motif CLI** (`dotnet motif`) | `init` sets up the `motif/` folder and the `AGENTS.md` pointer; `check` runs the gentle checks below. | [#4](https://github.com/motif-dotnet/.github/issues/4) |
 | **Glossary checks** | Flag **Avoid** words, terms still *proposed*, and sketch names with no entry. | Likely the CLI's first check. |
 | **Glossary editor** | An app for browsing and editing `motif/glossary.md`. | Reads and writes the same file. Started as a read-only viewer, [Motif Glossary](https://github.com/motif-dotnet/Motif.Glossary) ([#10](https://github.com/motif-dotnet/.github/issues/10)). |
@@ -39,7 +40,6 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Spec conventions** | How behaviour specs are named and laid out, in glossary terms, perhaps with a spec project the plan generates. | First step towards plain-English specs. |
 | **Agent review** | A review prompt or skill that checks a change against Motif's opinions (architecture, glossary, style) and gives advice only. | Could cover the spirit of the checks long before they're built. |
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
-| **Motif Memory** | Set up an agent's external memory: a git repo of progressively discoverable Markdown files, with the roles, workflow and design guidelines that suit you. The agent's instructions file just points to it, and a Memory Auditor role helps it grow. | Mainly a setup tool. Written up in [Motif.Memory](https://github.com/motif-dotnet/Motif.Memory). |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
 
 ## Open questions
