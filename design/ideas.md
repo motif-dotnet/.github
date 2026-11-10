@@ -40,7 +40,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Agent review** | A review prompt or skill that checks a change against Motif's opinions (architecture, glossary, style) and gives advice only. | Could cover the spirit of the checks long before they're built. |
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
-| **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | Trial first, on Motif's own specs; AwesomeAssertions stays the default meanwhile. See [Motif.Is](#motifis-isly) below. |
+| **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | On trial in [Motif.Is](https://github.com/motif-dotnet/Motif.Is), specced in itself; AwesomeAssertions stays the default in solution plans meanwhile. See [Motif.Is](#motifis-isly) below. |
 
 ## Motif.Is (Isly)
 
