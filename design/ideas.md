@@ -29,7 +29,6 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 
 | Idea | One line | Notes |
 |---|---|---|
-| **Motif Memory** | Set up an agent's external memory: a git repo of progressively discoverable Markdown files, with the roles, workflow and design guidelines that suit you. The agent's instructions file just points to it, and a Memory Auditor role helps it grow. | Mainly a setup tool. Written up in [Motif.Memory](https://github.com/motif-dotnet/Motif.Memory). |
 | **Motif CLI** (`dotnet motif`) | `init` sets up the `motif/` folder and the `AGENTS.md` pointer; `check` runs the gentle checks below. | [#4](https://github.com/motif-dotnet/.github/issues/4) |
 | **Glossary checks** | Flag **Avoid** words, terms still *proposed*, and sketch names with no entry. | Likely the CLI's first check. |
 | **Glossary editor** | An app for browsing and editing `motif/glossary.md`. | Reads and writes the same file. Started as a read-only viewer, [Motif Glossary](https://github.com/motif-dotnet/Motif.Glossary) ([#10](https://github.com/motif-dotnet/.github/issues/10)). |
