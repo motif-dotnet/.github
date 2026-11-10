@@ -7,6 +7,8 @@
 
 **Opinionated, agent-assisted tooling for building .NET apps, from first sketch onwards.**
 
+> **Latest:** [Motif Memory](https://github.com/motif-dotnet/Motif.Memory) is next up: set up an agent's external memory, with the roles, workflow and design guidelines that suit you.
+
 Motif.NET is a suite of tools and conventions for building .NET apps with a coding agent. Each one does one job well, and they work together through files in the app's repo, so a design you sketch can become a plan that a coding agent builds from.
 
 The tools are opinionated about architecture, naming, code style and automated specs. Using them is optional: pick the ones you want, and none of them gets in your way by default. Where a good .NET tool already exists, Motif sets it up for you rather than replacing it.
