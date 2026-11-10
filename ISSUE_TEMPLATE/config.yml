@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Share an idea
+    url: https://github.com/motif-dotnet/.github/discussions/categories/ideas
+    about: A new tool, a convention, or anything not settled enough for an issue.
+  - name: Ask a question
+    url: https://github.com/motif-dotnet/.github/discussions/categories/q-a
+    about: How to use a tool, or why it works the way it does.

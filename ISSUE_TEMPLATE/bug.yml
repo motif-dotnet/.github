@@ -1,0 +1,37 @@
+name: Report a bug
+description: Something in a Motif tool doesn't work the way it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. A short report is fine; the steps matter most.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps that lead to the bug, as best you can.
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Where you saw it
+      description: Browser and OS for the web tools, or .NET SDK version if you built it yourself.
+      placeholder: Edge 131 on Windows 11
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, a file that shows the problem, or error messages from the browser console.

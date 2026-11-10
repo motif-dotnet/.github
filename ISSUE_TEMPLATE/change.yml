@@ -1,0 +1,33 @@
+name: Suggest a change
+description: A specific change or addition to this tool. For a new tool or a broad idea, start a discussion instead.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Motif's tools are opinionated, so not every change will fit, but every suggestion gets read.
+        For a new tool, or an idea that isn't settled yet, [start a thread in Ideas](https://github.com/motif-dotnet/.github/discussions/categories/ideas) instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you're trying to do
+      description: The job you were doing and where the tool got in the way or fell short.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: The change you'd like
+      description: What the tool could do differently. Rough is fine.
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to make the change yourself?
+      options:
+        - "No, just suggesting it"
+        - "Yes, with a pull request"
+        - "Maybe, with some pointers"
+    validations:
+      required: true
