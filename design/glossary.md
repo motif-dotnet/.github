@@ -55,6 +55,13 @@ without saving a file. Opens in Viewer mode.
 
 Markdown, not JSON, because people read and review it far more often than tools parse it. The fixed shape (one heading per term, a bold-labelled field list) keeps it parseable for a later tool.
 
+### Terms in prose
+
+- **Names take Title Case.** The names of specific things (systems, actors, external systems, storage, ports, adapters, and roles where an app has them) are proper nouns: the Developer, the Memory Files port.
+- **Other terms stay lower case**, even though they're deliberate: snapshot link, temporary doc.
+- **Italics only when writing about the word itself**, as when contrasting *Project* with *planned project*. There are no other markers in running text. What makes a term deliberate is using it consistently and avoiding its **Avoid** words, which a check can flag. How it looks doesn't.
+- **A doc for people may link a term to its entry the first time it appears**, where a reader might not know it.
+
 ## Where terms come from
 
 1. **From the sketch.** A `.motifsketch.json` already names the system's actors, external systems, storage and ports, mostly with one-line descriptions. Each one is a starting entry. In Motif Sketch's own design these are *Architect*, *Projects*, *Autosave*, *Diagram Exports*, *Solution Stubs* and *Clipboard*.
