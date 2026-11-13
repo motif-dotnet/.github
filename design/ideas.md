@@ -4,6 +4,12 @@ Possible tools and conventions for Motif.NET. Nothing here is built or promised.
 
 Thoughts, or an idea of your own? Start a thread in [Discussions](https://github.com/motif-dotnet/.github/discussions/categories/ideas).
 
+## Purpose
+
+Typing is no longer the bottleneck; understanding and checking the work is. Motif keeps agent-assisted software understandable.
+
+That's why the effort goes into the glossary, the sketch, specs and review rather than into writing code faster. Every principle and idea below is judged by it.
+
 ## Principles
 
 These came out of discussing what the suite is for. Every idea should fit them.
