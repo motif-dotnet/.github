@@ -74,3 +74,4 @@ Under the joke there's a real point. An assertion isn't a wish; it's a propositi
 
 - Is Motif for starting an app, or for its whole life? The current lean is above, under **Code may become the source of truth**.
 - Should the Tools table list conventions as well as apps? The Glossary is listed as a format on trial, for now.
+- **Is Motif a ladder of tools?** A feeling, not yet an idea. The lowest rung is the Motif tools themselves: simple, largely built by agents, and partly built with Motif. The next rung is bespoke simple tools for a project or team, which Motif helps you make quickly, with throwaway tools ([#31](https://github.com/motif-dotnet/.github/issues/31)) at the bottom of it. On the top rung, the rungs below together help a person or team build and maintain complex software, still with agents but with more human-scale engineering. Each rung makes the next cheaper. If it holds, it could become a principle, or part of the purpose.
