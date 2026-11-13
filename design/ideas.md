@@ -8,7 +8,7 @@ Thoughts, or an idea of your own? Start a thread in [Discussions](https://github
 
 Typing is no longer the bottleneck; understanding and checking the work is. Motif keeps agent-assisted software understandable.
 
-That's why the effort goes into the glossary, the sketch, specs and review rather than into writing code faster. Every principle and idea below is judged by it.
+That's why the effort goes into the glossary, the sketch, specs and review rather than into writing code faster. Every principle and idea below is judged by it. For readers outside, the profile's [Why this exists](https://github.com/motif-dotnet/.github/blob/main/profile/README.md#why-this-exists) says the same thing in terms of people and teams.
 
 ## Principles
 
@@ -75,4 +75,4 @@ Under the joke there's a real point. An assertion isn't a wish; it's a propositi
 
 - Is Motif for starting an app, or for its whole life? The current lean is above, under **Code may become the source of truth**.
 - Should the Tools table list conventions as well as apps? The Glossary is listed as a format on trial, for now.
-- **Is Motif a ladder of tools?** A feeling, not yet an idea. The lowest rung is the Motif tools themselves: simple, largely built by agents, and partly built with Motif. The next rung is bespoke simple tools for a project or team, which Motif helps you make quickly, with throwaway tools ([#31](https://github.com/motif-dotnet/.github/issues/31)) at the bottom of it. On the top rung, the rungs below together help a person or team build and maintain complex software, still with agents but with more human-scale engineering. Each rung makes the next cheaper. If it holds, it could become a principle, or part of the purpose.
+- **Is Motif a ladder of tools?** A feeling, not yet an idea. The lowest rung is the Motif tools themselves: simple, largely built by agents, and partly built with Motif. The next rung is bespoke simple tools for a project or team, which Motif helps you make quickly, with throwaway tools ([#31](https://github.com/motif-dotnet/.github/issues/31)) at the bottom of it. On the top rung, the rungs below together help a person or team build and maintain complex software, still with agents but with more human-scale engineering. Each rung makes the next cheaper. If it holds, it could become a principle, or part of the purpose. A line for it, kept for then: *"Agents do more of the climbing on the lower rungs; people decide where the ladder goes."*
