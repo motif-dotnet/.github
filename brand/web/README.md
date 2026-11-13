@@ -27,7 +27,7 @@ The components hold no state of their own: the app says which menu is open and w
 ## Conventions
 
 - **Orange means "look here"**: the selection, proposed, a warning, the primary button. Never decoration.
-- **Banners** show the state of what's on screen, for as long as it lasts (read-only, a sketch file that couldn't be read). **Toasts** report the outcome of a command (saved, copied, couldn't be opened). A title-only note goes after 3.5 s; anything with a sentence to read, and every warning or problem, stays 10 s.
+- **Banners** show the state of what's on screen, for as long as it lasts (read-only, a sketch file that couldn't be read). **Toasts** report the outcome of a command (saved, copied, couldn't be opened). A title-only note goes after 3.5 s; anything with a sentence to read, and every warning or problem, stays 10 s. A toast that offers text to copy (`Toaster.Offer`) is something to act on, so it shows that text on a line of its own, with a Copy button under it, and stays until dismissed.
 - **Code**: `<code>` is code in prose (file, class and member names), in monospace in the text colour. `.code` is keys and formats (`Ctrl+S`, `SVG`), muted.
 - **Narrow screens** (below 900 px): a command's label goes in a `<span class="wide">`, so only its icon shows. **Phones** (below 600 px) drop "Motif" from the brand, and any `.long` text in pills and primary buttons.
 - **Help**: every tool has a Help button at the right of the app bar, after the theme menu.
