@@ -17,7 +17,7 @@ The tools are opinionated about architecture, naming, code style and automated s
 
 We're big fans of agents. But software is made by people, and kept alive by teams. So Motif keeps agent-built software at a human scale: small enough to understand, named in words the team shares, and shaped so anyone can find their way in.
 
-Motif.NET is how I'm finding my way in agent-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus. Say hello or share ideas in [Discussions](https://github.com/motif-dotnet/.github/discussions).
+Motif.NET is how I ([John Page](https://github.com/johnrpage)) am finding my way in agent-assisted development. The tools are what I build along the way, so expect ideas, trials and changes of mind. If you find them useful, or want to come along for the ride, that's a bonus. Say hello or share ideas in [Discussions](https://github.com/motif-dotnet/.github/discussions).
 
 ## Tools
 
