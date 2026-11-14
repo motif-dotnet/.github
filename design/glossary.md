@@ -1,6 +1,6 @@
 # Motif Glossary: design note
 
-**Status:** format on trial since 2026-11-08. A viewer app, [Motif.Glossary](https://github.com/motif-dotnet/Motif.Glossary), is being built.
+**Status:** format on trial since 2026-11-08. A viewer app, [Motif Glossary](https://github.com/motif-dotnet/Motif.Glossary), is on trial.
 
 ## The idea
 

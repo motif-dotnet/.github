@@ -1,6 +1,6 @@
 # Ideas
 
-Possible tools and conventions for Motif.NET. Nothing here is built or promised. An idea moves to the profile's Tools table once it has a design note of its own in this folder.
+Possible tools and conventions for Motif.NET. Nothing here is built or promised. An idea moves to the profile's Tools table once it has a design of its own, in a note here or in its repo.
 
 Thoughts, or an idea of your own? Start a thread in [Discussions](https://github.com/motif-dotnet/.github/discussions/categories/ideas).
 
