@@ -31,7 +31,7 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 - **Unproven kinds say so.** Proven so far: Blazor WebAssembly (Sketch itself). The planner also knows `wpf` and `console`, which no Motif solution has used yet. A plan that uses an unproven template says so and asks the agent to report what needed fixing.
 - **Services are in scope.** A REST API (ASP.NET Core, `webapi`) is a driving adapter, like a UI. The planner doesn't know it yet; it gets added when a tool first needs it.
 - **Hosting is out of scope for now.** Where an app runs (GitHub Pages, Azure, containers) is a label in the sketch, not something the plan sets up. Services will feel this first.
-- **Apps that use AI models are in scope, with a firm opinion.** A model is an external system behind a driven port. The real adapter uses `Microsoft.Extensions.AI`, a fake adapter gives fixed answers so specs stay fast and deterministic, and the domain never references an AI package. This holds even when the app is mostly AI.
+- **Apps that use AI models are in scope, with a firm opinion.** A model is an external system behind a driven port. The real adapter uses `Microsoft.Extensions.AI`, a fake [Fitting](adapters.md) gives fixed answers so specs stay fast and deterministic, and the domain never references an AI package. This holds even when the app is mostly AI.
 
 ## The list
 
@@ -49,6 +49,8 @@ Which kinds of .NET app the suite covers ([#9](https://github.com/motif-dotnet/.
 | **Decision records** | `motif/decisions/`: short notes on why the design is the way it is, so agents don't undo choices made on purpose. | |
 | **Plain-English specs** | Readable, glossary-shaped specs generated from well-named automated specs, as a living document of what the app does. | Blue-sky. Code first: the specs are tests, and the English is generated from them. |
 | **System explorer** | Walk the solution's graph in 3D (ports, adapters, projects and their links) rather than reading a flat diagram. | Blue-sky. Built on Sketch from code: the same graph, drawn to explore rather than to edit. |
+| **Start without ports** | A new app starts with its use cases calling [Seams](adapters.md#terms) directly, over thin Fittings, and a port is extracted when it's needed, such as a second way of doing something or a second UI. | Specs sit on the User port and fake Fittings either way, so extracting a port touches no spec: the refactor is cheap and protected. Costs: rules start in the use cases and move later, Seams live outside an adapter, and Motif Sketch draws and generates two shapes. To try on the next new app ([adapters](adapters.md), rule 22). |
+| **Deep adapters in the sketch** | Rethink how Motif Sketch draws adapters, now that some have a Seam and Fittings behind them. | The model records Seams, but the sketch draws nothing for them yet ([adapters](adapters.md), rule 21). Needs thought of its own. |
 | **Motif.Is** (Isly) | A proposition library for specs: `total.Is(12.50m)` states a fact, rather than saying what it *should* be. Each check keeps its subject, claim and expected value, so plain-English specs can be generated from them. | On trial in [Motif.Is](https://github.com/motif-dotnet/Motif.Is), specced in itself; AwesomeAssertions stays the default in solution plans meanwhile. See [Motif.Is](#motifis-isly) below. |
 
 ## Motif.Is (Isly)
