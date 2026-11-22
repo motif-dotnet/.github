@@ -9,8 +9,9 @@ The one source for the suite's mark and wordmarks. Tools use these files (or cop
 | [motif-net.svg](motif-net.svg) / [motif-net-dark.svg](motif-net-dark.svg) | The suite lockup: mark + **Motif**.NET |
 | [motif-sketch.svg](motif-sketch.svg) / [motif-sketch-dark.svg](motif-sketch-dark.svg) | Motif Sketch's lockup: mark + Motif **Sketch** |
 | [motif-glossary.svg](motif-glossary.svg) / [motif-glossary-dark.svg](motif-glossary-dark.svg) | Motif Glossary's lockup: mark + Motif **Glossary** |
+| [motif-bubbles.svg](motif-bubbles.svg) / [motif-bubbles-dark.svg](motif-bubbles-dark.svg) | Motif Bubbles' lockup: mark + Motif **Bubbles** |
 | [avatar.svg](avatar.svg) / [avatar.png](avatar.png) | The org avatar, 512 × 512 on white (GitHub rounds the corners) |
-| [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) / [social-preview-glossary.png](social-preview-glossary.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
+| [social-preview-net.png](social-preview-net.png) / [social-preview-sketch.png](social-preview-sketch.png) / [social-preview-glossary.png](social-preview-glossary.png) / [social-preview-bubbles.png](social-preview-bubbles.png) | Link-preview cards, 1280 × 640, for each repo's Settings → Social preview: the lockup, a one-line description, the URL and an orange bar |
 | [linkedin-banner-light.png](linkedin-banner-light.png) / [linkedin-banner-dark.png](linkedin-banner-dark.png) | LinkedIn profile banners, 1584 × 396: the lockup, the tagline and the org URL, kept to the right so the profile photo doesn't cover them |
 | [cards.json](cards.json) / [render-cards.ps1](render-cards.ps1) | The words and layout of the cards and banners above, and the script that draws them. See [Cards and banners](#cards-and-banners) |
 | [web/](web/) | The web kit: the shared stylesheet, fonts, icons and app-bar components every Motif web tool copies in. See its [README](web/README.md) |
@@ -60,6 +61,7 @@ Each card is also copied elsewhere, so after rendering, copy it on and push:
 | `social-preview-net.png` | `motif-dotnet.github.io/social-preview.png` | Upload it as the Social preview of the `.github` and `motif-dotnet.github.io` repos |
 | `social-preview-sketch.png` | `Motif.Sketch.App/wwwroot/social-preview.png` | Upload it as the Motif.Sketch repo's Social preview |
 | `social-preview-glossary.png` | `Motif.Glossary.App/wwwroot/social-preview.png` | Upload it as the Motif.Glossary repo's Social preview |
+| `social-preview-bubbles.png` | `Motif.Bubbles.App/wwwroot/social-preview.png` | Upload it as the Motif.Bubbles repo's Social preview |
 | `linkedin-banner-*.png` | | Upload it as the LinkedIn banner |
 
 ## Adding a tool

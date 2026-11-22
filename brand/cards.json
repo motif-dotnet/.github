@@ -36,6 +36,11 @@
       "url": "motif-dotnet.github.io/Motif.Glossary"
     },
     {
+      "file": "social-preview-bubbles.png", "layout": "social", "theme": "light", "lockup": "motif-bubbles",
+      "lines": ["See a Motif app's architecture as bubbles: sized by its", "code, linked by what uses, implements and checks what,", "and ringed with how well its specs catch mistakes."],
+      "url": "motif-dotnet.github.io/Motif.Bubbles"
+    },
+    {
       "file": "linkedin-banner-light.png", "layout": "linkedin", "theme": "light", "lockup": "motif-net",
       "lines": ["Opinionated, agent-assisted tooling for building .NET apps,", "from first sketch onwards."],
       "url": "github.com/motif-dotnet"
