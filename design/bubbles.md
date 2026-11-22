@@ -1,6 +1,6 @@
 # Motif Bubbles: design note
 
-**Status:** next up, from a grilling on 2026-11-22. Nothing is built yet. A mockup with Motif Glossary's real numbers was agreed as the shape of the first version.
+**Status:** on trial as [Motif Bubbles](https://github.com/motif-dotnet/Motif.Bubbles), designed in a grilling on 2026-11-22. A mockup with Motif Glossary's real numbers was agreed as the shape of the first version.
 
 ## The idea
 
