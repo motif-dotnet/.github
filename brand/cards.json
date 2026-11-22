@@ -41,6 +41,11 @@
       "url": "motif-dotnet.github.io/Motif.Bubbles"
     },
     {
+      "file": "social-preview-memory.png", "layout": "social", "theme": "light", "lockup": "motif-memory",
+      "lines": ["Set up an agent's external memory: a git repo of", "Markdown files, with the roles, workflow and design", "guidelines that suit you."],
+      "url": "motif-dotnet.github.io/Motif.Memory"
+    },
+    {
       "file": "linkedin-banner-light.png", "layout": "linkedin", "theme": "light", "lockup": "motif-net",
       "lines": ["Opinionated, agent-assisted tooling for building .NET apps,", "from first sketch onwards."],
       "url": "github.com/motif-dotnet"
